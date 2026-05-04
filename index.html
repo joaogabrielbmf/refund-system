@@ -50,7 +50,9 @@
             <fieldset>
               <legend>Valor da despesa</legend>
               <input
-                type="text"
+                type="number" 
+                min="0" 
+                step="0.01"
                 name="amount"
                 id="amount"
                 placeholder="0,00"
@@ -66,9 +68,9 @@
           <header>
             <p>
               Minhas solicitações <i>&bullet;</i>
-              <span>0 despesas</span>
+              <span id="numeroDespesas"></span>
             </p>
-            <h2><small>R$</small>0,00</h2>
+            <h2 id="total"><small>R$</small>0,00</h2>
           </header>
 
           <ul>
@@ -80,7 +82,7 @@
                 <span>Alimentação</span>
               </div>
 
-              <span class="expense-amount"><small>R$</small>1.420,57</span>
+              <span class="expense-amount"><small>R$</small>1420.57</span>
 
               <img src="./img/remove.svg" alt="remover" class="remove-icon" />
             </li>
